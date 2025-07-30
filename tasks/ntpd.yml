@@ -1,5 +1,11 @@
 ---
 
+- name: Remove packages
+  ansible.builtin.apt:
+    state: absent
+    name:
+      - systemd-timesyncd
+
 - name: Install Packages
   apt:
     state: present
