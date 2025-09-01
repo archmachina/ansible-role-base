@@ -1,8 +1,5 @@
 ---
 
-- name: Storage configuration
-  include_tasks: storage.yml
-
 # Configure DNS resolution
 - name: Resolver configuration
   include_tasks: "resolver.yml"
@@ -14,6 +11,10 @@
 # Install packages
 - name: Package configuration
   include_tasks: packages.yml
+
+# Storage configuration
+- name: Storage configuration
+  include_tasks: storage.yml
 
 # Configure groups
 - name: Configure groups
