@@ -27,6 +27,12 @@
           - locales
         state: present
 
+    - name: Remove SetLocale restriction
+      ansible.builtin.lineinfile:
+        path: /usr/share/dbus-1/system.d/systemd-localed-read-only.conf
+        state: absent
+        search_string: "SetLocale"
+
     - name: Current locale configuration
       command: "localectl status"
       register: locale_status
