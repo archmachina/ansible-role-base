@@ -10,7 +10,7 @@
   apt:
     state: present
     name:
-      - ntp
+      - ntpsec
       - ntpstat
       - ntpdate
 
