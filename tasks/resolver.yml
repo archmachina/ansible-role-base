@@ -22,3 +22,9 @@
         owner: root
         group: root
         mode: 0644
+
+    - name: Remove systemd-resolved
+      ansible.builtin.package:
+        name: systemd-resolved
+        state: absent
+
